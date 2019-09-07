@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
 
   def actors_list
     self.actors collect do |a|
-      "#{a.show_id} - #{a.network_id}"
+      a.full_name
     end
   end
 end
